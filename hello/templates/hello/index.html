@@ -1,0 +1,35 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/
+        bootstrap.min.css"
+    crossorigin="anonymouse">
+    </head>
+<body class="container">
+    <h1 class="display-4 text-primary">
+        {{title}}</h1>
+        <p>{{message|safe}}</p>
+    <table class="table">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+            <th>mail</th>
+            <th>birthday</th>
+        </th>
+    {% for item in data %}
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.mail}}</td>
+            <td>{{item.birthday}}</td>
+        <tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
